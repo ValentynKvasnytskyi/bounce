@@ -9,29 +9,30 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
+    rename = require('gulp-rename'),
     reload = browserSync.reload;
     //autoprefixer = require('gulp-autoprefixer');
 
 var path = {
     build: {
-        html: 'build',
-        js: 'build/js',
-        css: 'build/css',
-        img: 'build/img',
-        fonts: 'build/fonts'
+        html: './build',
+        js: './build/js',
+        css: './build/css',
+        img: './build/img',
+        fonts: './build/fonts'
     },
 
     src: {
-        html: 'src/template/index.html',
-        js: 'src/js/main.js',
-        style: 'src/style/main.scss',
-        img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        html: './src/template/index.html',
+        js: './src/js/main.js',
+        style: './src/style/main.scss',
+        img: './src/img/**/*.*',
+        fonts: './src/fonts/**/*.*'
     },
     watch: {
-        html: 'src/template/*.html',
-        js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss'
+        html: './src/template/*.html',
+        js: './src/js/**/*.js',
+        style: './src/style/**/*.scss'
     },
 
     clean: './build'
@@ -41,7 +42,8 @@ gulp.task('webserver', function(){
     browserSync({
         server: {
             baseDir: 'build'
-        }
+        },
+        notify: false 
     });
 });
 
@@ -52,7 +54,21 @@ gulp.task('html:build', function(){
         .pipe(reload({stream: true}));
 });
 
-gulp.task('js:build', function(){
+gulp.task('libs:build', function(){
+    gulp.src([
+        './bower_components/jquery/dist/jquery.min.js',
+        './bower_components/wow/dist/wow.min.js',
+        './bower_components/magnific-popup/dist/magnific-popup.min.js'
+    ])
+        .pipe(sourcemaps.init())
+        .pipe(concat('libs.js'))
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('build/js'))
+});
+
+gulp.task('js:build',['libs:build'], function(){
     gulp.src(path.src.js)
         .pipe(rigger())
         .pipe(sourcemaps.init())
@@ -60,16 +76,6 @@ gulp.task('js:build', function(){
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
-});
-gulp.task('libs:build', function(){
-    gulp.src([
-        'bower_components/jquery/dist/jquery.js'
-    ])
-        .pipe(sourcemaps.init())
-        .pipe(concat('libs.js'))
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build/js/libs'))
 });
 
 gulp.task('style:build', function(){
@@ -81,6 +87,15 @@ gulp.task('style:build', function(){
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
+
+gulp.task('css:build', ['style:build'], function() {
+    gulp.src('src/style/libs.scss') // Выбираем файл для минификации
+        .pipe(sass())
+        .pipe(cssmin()) // Сжимаем
+        .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
+        .pipe(gulp.dest(path.build.css)); // Выгружаем в папку app/css
+});
+
 gulp.task('img:build', function(){
     gulp.src(path.src.img)
         .pipe(imagemin())
@@ -93,11 +108,10 @@ gulp.task('fonts:build', function(){
 gulp.task('build', [
     'html:build',
     'js:build',
-    'style:build',
+    'css:build',
     'img:build',
-    'fonts:build',
-    'libs:build'
-])
+    'fonts:build'
+]);
 
 gulp.task('watch', function(){
     watch([path.watch.js], function(ev, callback){
