@@ -1,0 +1,2 @@
+(new WOW).init();
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOlsiV09XIiwiaW5pdCJdLCJtYXBwaW5ncyI6IkNBQUEsSUFBSUEsS0FBTUMiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIm5ldyBXT1coKS5pbml0KCk7Il19
