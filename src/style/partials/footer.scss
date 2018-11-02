@@ -1,0 +1,99 @@
+.footer {
+    position: relative;
+    background: $greenColor;
+    padding: 20px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.footer__social {
+    padding-right: 5%;
+    .footer-social__title {
+        margin-bottom: 20px;
+    }
+
+    a {
+        display: inline-block;
+        margin-right: 11px;
+        
+        i {
+            font-size: 1.2em;
+            color: $whiteText;
+            background: $headerBg;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            padding-top: 2px;
+            transition: .5s ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        .fa-facebook-f{
+            padding-left: 9px;
+            padding-top: 5px;
+        }
+        .fa-instagram{
+            padding-left: 7px;
+            padding-top: 5px;
+        }
+        .fa-youtube {
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+    }
+}
+.footer__copy {
+    
+}
+@media screen and (max-width: 992px) {
+    .footer {
+        .container {
+            flex-direction: column;
+        }
+    }
+    .footer__social {
+        padding-left: 0;
+        margin-top: 20px;
+    
+        a {
+            display: inline-block;
+            margin-right: 5px;
+            
+            i {
+                font-size: 1.5em;
+                color: $whiteText;
+                background: $headerBg;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                padding-top: 2px;
+                transition: .5s ease;
+    
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            .fa-facebook-f{
+                padding-left: 9px;
+                padding-top: 5px;
+            }
+            .fa-instagram{
+                padding-left: 7px;
+                padding-top: 5px;
+            }
+            .fa-youtube {
+                padding-left: 5px;
+                padding-top: 5px;
+            }
+        }
+    }
+    
+}
+.empty-block {
+    text-align: center;
+    background: #c2c2c3;
+    padding: 300px 0;
+}

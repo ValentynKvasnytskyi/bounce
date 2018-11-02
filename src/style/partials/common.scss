@@ -1,12 +1,10 @@
-body {
+.page {
     font-size: 16px;
     font-family: $roboto;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
-.container {
-    width: 100%;
-    max-width: 1170px;
-}
+
 ul {
     margin: 0;
 }
@@ -35,5 +33,44 @@ a {
     &:hover{
         color: $greenColor;
         border: 1px solid $greenColor;
+    }
+}
+
+i{
+    color: inherit;
+    font-size: inherit;
+}
+
+.none {
+    display: none;
+}
+.header-top__social, .footer__social{
+    padding-left: 40px;
+    a {
+        display: inline-block;
+        margin-right: 11px;
+        
+        i {
+            color: $headerBg;
+            background: $whiteText;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            padding-top: 2px;
+            transition: .5s ease;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        .fa-facebook-f{
+            padding-left: 5px;
+        }
+        .fa-instagram{
+            padding-left: 3px;
+        }
+        .fa-youtube {
+            padding-left: 1px;
+        }
     }
 }

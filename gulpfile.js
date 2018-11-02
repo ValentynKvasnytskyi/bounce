@@ -23,7 +23,7 @@ var path = {
     },
 
     src: {
-        html: './src/template/index.html',
+        html: ['./src/template/**/*.html', '!./src/template/_*.html'],
         js: './src/js/main.js',
         style: './src/style/main.scss',
         img: './src/img/**/*.*',
