@@ -1,0 +1,141 @@
+.detox-features {
+    background: #f1f1f1;
+    .description {
+        margin-bottom: 50px;
+    }
+    .inner-title {
+        font-size: 1.5em;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    &__item {
+        width: 45%;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 70px;
+        font-size: 1.4em;
+        text-align: center;
+    }
+    &__icon {
+        display: inline-block;
+        margin: 0 auto;
+        width: 64px;
+        height: 64px;
+    }
+}
+.weight {
+    background-image: url('../img/weight.png');
+}
+.clean {
+    background-image: url('../img/kidney.png');
+}
+.stomach {
+    background-image: url('../img/stomach.png');
+}
+.toxin {
+    background-image: url('../img/settings.png');
+}
+.head {
+    background-image: url('../img/head.png');
+}
+.energy {
+    background-image: url('../img/charging.png');
+}   
+.pain {
+    background-image: url('../img/Pain.png');
+}
+.ligth {
+    background-image: url('../img/smile.png');
+}
+.alarm {
+    background-image: url('../img/alarm.png');
+}
+.stable {
+    background-image: url('../img/liver.png');
+}
+
+.about-detox {
+    background: $greenColor;
+    color: $headerBg;
+    .title, .description,.inner-title, .inner-description {
+        color: $headerBg;
+    }
+    .line {
+        background: $headerBg;
+    }
+    &__row {
+        margin: 50px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image {
+        width: 25%;
+        box-shadow: 0 0 20px #000;
+    }
+    &__description.description {
+        width: 45%;
+        font-size: 1.4em;
+        align-self: center;
+    }
+    .inner-title {
+        margin: 50px 0;
+    }
+    .inner-description {
+        line-height: 2;
+    }
+}
+.detox-advantages__items {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.detox-advantages__item {
+    width: 35%;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 992px) {
+    .detox-features {
+        &__items {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        &__item {
+            width: 100%;
+        }
+        &__icon {
+            display: inline-block;
+            margin: 0 auto;
+            width: 64px;
+            height: 64px;
+        }
+    }
+    .about-detox {
+        &__row {
+            margin-top: 50px;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__image {
+            width: 80%;
+            margin-bottom: 40px;
+        }
+        &__description.description {
+            width: 90%;
+            font-size: 1.2em;
+            margin-bottom: 60px;
+        }
+    }
+    .detox-advantages__items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .detox-advantages__item {
+        width: 90%;
+    }
+}

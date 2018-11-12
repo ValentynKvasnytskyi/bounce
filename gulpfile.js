@@ -4,12 +4,12 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css'),
+    cssnano = require('gulp-cssnano'),
     rimraf = require('rimraf'),
     browserSync = require('browser-sync'),
-    imagemin = require('gulp-imagemin'),
+    //imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
+    //rename = require('gulp-rename'),
     reload = browserSync.reload;
     //autoprefixer = require('gulp-autoprefixer');
 
@@ -24,7 +24,7 @@ var path = {
 
     src: {
         html: ['./src/template/**/*.html', '!./src/template/_*.html'],
-        js: './src/js/main.js',
+        js: './src/js/**/*.js',
         style: './src/style/main.scss',
         img: './src/img/**/*.*',
         fonts: './src/fonts/**/*.*'
@@ -54,23 +54,9 @@ gulp.task('html:build', function(){
         .pipe(reload({stream: true}));
 });
 
-gulp.task('libs:build', function(){
-    gulp.src([
-        './bower_components/jquery/dist/jquery.min.js',
-        './bower_components/wow/dist/wow.min.js',
-        './bower_components/magnific-popup/dist/magnific-popup.min.js'
-    ])
-        .pipe(sourcemaps.init())
-        .pipe(concat('libs.js'))
-        .pipe(uglify())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build/js'))
-});
-
-gulp.task('js:build',['libs:build'], function(){
+gulp.task('js:build', function(){
     gulp.src(path.src.js)
-        .pipe(rigger())
+        .pipe(concat('main.js'))
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())
@@ -82,23 +68,15 @@ gulp.task('style:build', function(){
     gulp.src(path.src.style)
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(cssmin())
+        .pipe(cssnano())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
 
-gulp.task('css:build', ['style:build'], function() {
-    gulp.src('src/style/libs.scss') // Выбираем файл для минификации
-        .pipe(sass())
-        .pipe(cssmin()) // Сжимаем
-        .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-        .pipe(gulp.dest(path.build.css)); // Выгружаем в папку app/css
-});
-
 gulp.task('img:build', function(){
     gulp.src(path.src.img)
-        .pipe(imagemin())
+        //.pipe(imagemin())
         .pipe(gulp.dest(path.build.img))
 });
 gulp.task('fonts:build', function(){
@@ -108,7 +86,7 @@ gulp.task('fonts:build', function(){
 gulp.task('build', [
     'html:build',
     'js:build',
-    'css:build',
+    'style:build',
     'img:build',
     'fonts:build'
 ]);

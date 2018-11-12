@@ -1,78 +1,54 @@
-<div class="container">
-    <div class="header-top row">
-        <span class="header-top__contact col-lg-2 col-12">Телефон : +1800-222-3333</span>
-        <span class="header-top__contact col-lg-3 col-12">Email : contact@greennaturewp.com</span>
-        <div class="header-top__social col-lg-2 offset-lg-5 d-lg-block d-none">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+<div class="header__header-top wow fadeInUp">
+    <div class="container">
+        <div class="row">
+            <span class="header__contact col-lg-2 col-12">Телефон : +1800-222-3333</span>
+            <span class="header__contact col-lg-3 col-12">Email : contact@greennaturewp.com</span>
+            <div class="header__social col-lg-2 offset-lg-5 d-lg-block d-none">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="line header__line"></div>
+<div class="line"></div>
 
-<div class="container">
-    <nav class="main-nav row justify-content-between">
-        <i class="open-menu fas fa-bars col-12 text-right" id="open-menu"></i>
+<div class="header__main-nav wow fadeInUp">
+    <nav class="container">
+        <div class="row justify-content-between">
+            <i class="header__open-btn fas fa-bars col-1 text-right" id="open-menu"></i>
 
-        <a href="index.html" class="main-nav__logo col-1"><img src="img/Logo.png" alt="Logo"></a>
-        <ul class="menu nav">
-            <li class="menu__item"><a href="index.html">Головна</a></li>
-            <li class="menu__item"><a href="water.html">Вода</li>
-            <li class="menu__item"><a href="#">Здоров'я <i class="fas fa-angle-down"></i></a>
-                <ul class="menu__subitem subitem">
-                    <li><a href="#">Перший</a></li>
-                    <li><a href="#">Другий</a></li>
-                    <li><a href="#">Третій</a></li>
-                </ul>
-            </li>
-            <li class="menu__item"><a href="#">Краса <i class="fas fa-angle-down"></i></a>
-                <ul class="menu__subitem subitem">
-                    <li><a href="#">Перший</a></li>
-                    <li><a href="#">Другий</a></li>
-                    <li><a href="#">Третій</a></li>
-                </ul>
-            </li>
-            <li class="menu__item"><a href="#">Дім <i class="fas fa-angle-down"></i></a>
-                <ul class="menu__subitem subitem">
-                    <li><a href="#">Перший</a></li>
-                    <li><a href="#">Другий</a></li>
-                    <li><a href="#">Третій</a></li>
-                </ul>
-            </li>
-            <li class="menu__item"><a href="#">Бізнес</a></li>
-            <li class="menu__item"><a href="#">Контакти</a></li>    
-        </ul>
+            <a href="index.html" class="header__logo col-1"><img src="img/Logo.png" alt="Logo"></a>
+            <ul class="header__main-nav-menu">
+                <li class="header__menu-item"><a href="index.html">Головна</a></li>
+                <li class="header__menu-item"><a href="water.html">Вода</a></li>
+                <li class="header__menu-item"><a href="detox.html">Detox</a></li>
+                <li class="header__menu-item"><a href="#">Здоров'я <i class="fas fa-angle-down"></i></a>
+                    <ul class="header__menu-subitem subitem">
+                        <li><a href="#">Коло-вада</a></li>
+                        <li><a href="#">Кишечник</a></li>
+                    </ul>
+                </li>
+                <li class="header__menu-item"><a href="#">Бізнес</a></li>
+                <li class="header__menu-item"><a href="#">Контакти</a></li>    
+            </ul>
+        </div>
     </nav>
 </div>
-<div class="menu-toggle" id="menu-right">
-        <i class="far fa-times-circle close-menu" id="close-menu"></i>
-        <ul>
-            <li class="menu-toggle__item"><a href="#">Головна</a></li>
-            <li class="menu-toggle__item"><a href="water.html">Вода</li>
-            <li class="menu-toggle__item"><a href="#">Здоров'я <i class="fas fa-angle-right"></i></a>
-                <ul class="menu-toggle__subitem none">
-                    <li><a href="#">Перший</a></li>
-                    <li><a href="#">Другий</a></li>
-                    <li><a href="#">Третій</a></li>
-                </ul>
-            </li>
-            <li class="menu-toggle__item"><a href="#">Краса <i class="fas fa-angle-right"></i></a>
-                <ul class="menu-toggle__subitem none">
-                    <li><a href="#">Перший</a></li>
-                    <li><a href="#">Другий</a></li>
-                    <li><a href="#">Третій</a></li>
-                </ul>
-            </li>
-            <li class="menu-toggle__item"><a href="#">Дім <i class="fas fa-angle-right"></i></a>
-                <ul class="menu-toggle__subitem none">
-                    <li><a href="#">Перший</a></li>
-                    <li><a href="#">Другий</a></li>
-                    <li><a href="#">Третій</a></li>
-                </ul>
-            </li>
-            <li class="menu-toggle__item"><a href="#">Бізнес</a></li>
-            <li class="menu-toggle__item"><a href="#">Контакти</a></li>    
-        </ul>
-    </div>
+<div class="header__menu-toggle" id="menu-toggle">
+    <i class="far fa-times-circle header__close-btn" id="close-menu"></i>
+    <ul>
+        <li class="header__menu-toggle-item"><a href="index.html">Головна</a></li>
+        <li class="header__menu-toggle-item"><a href="water.html">Вода</a></li>
+        <li class="header__menu-toggle-item"><a href="detox.html">Detox</a></li>
+        <li class="header__menu-toggle-item"><a href="#">Здоров'я <i class="fas fa-angle-right"></i></a>
+            <ul class="header__menu-toggle-subitem none">
+                <li><a href="#">Коло-вада</a></li>
+                <li><a href="#">Кишечник</a></li>
+            </ul>
+        </li>
+        <li class="header__menu-toggle-item"><a href="#">Бізнес</a></li>
+        <li class="header__menu-toggle-item"><a href="#">Контакти</a></li>    
+    </ul>
+</div>

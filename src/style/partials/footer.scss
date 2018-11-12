@@ -7,41 +7,18 @@
         justify-content: space-between;
     }
 }
-.footer__social {
-    padding-right: 5%;
-    .footer-social__title {
-        margin-bottom: 20px;
-    }
-
+.footer__social{
+    padding: 0;
     a {
         display: inline-block;
-        margin-right: 11px;
-        
-        i {
-            font-size: 1.2em;
-            color: $whiteText;
-            background: $headerBg;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            padding-top: 2px;
-            transition: .5s ease;
-
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
-        .fa-facebook-f{
-            padding-left: 9px;
-            padding-top: 5px;
-        }
-        .fa-instagram{
-            padding-left: 7px;
-            padding-top: 5px;
-        }
-        .fa-youtube {
-            padding-left: 5px;
-            padding-top: 5px;
+        text-align: center;
+        margin-right: 15px;
+        margin-top: 15px;
+        color: $headerBg;
+        transition: .5s ease;
+        font-size: 1.3em;
+        &:hover {
+            transform: scale(1.2);
         }
     }
 }
@@ -54,43 +31,13 @@
             flex-direction: column;
         }
     }
-    .footer__social {
-        padding-left: 0;
+    .footer__social{
         margin-top: 20px;
-    
         a {
-            display: inline-block;
-            margin-right: 5px;
-            
-            i {
-                font-size: 1.5em;
-                color: $whiteText;
-                background: $headerBg;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                padding-top: 2px;
-                transition: .5s ease;
-    
-                &:hover {
-                    transform: scale(1.2);
-                }
-            }
-            .fa-facebook-f{
-                padding-left: 9px;
-                padding-top: 5px;
-            }
-            .fa-instagram{
-                padding-left: 7px;
-                padding-top: 5px;
-            }
-            .fa-youtube {
-                padding-left: 5px;
-                padding-top: 5px;
-            }
+            margin-top: 5px;
+            font-size: 1.1em;
         }
-    }
-    
+    }    
 }
 .empty-block {
     text-align: center;

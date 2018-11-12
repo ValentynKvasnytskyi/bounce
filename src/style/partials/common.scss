@@ -44,33 +44,7 @@ i{
 .none {
     display: none;
 }
-.header-top__social, .footer__social{
-    padding-left: 40px;
-    a {
-        display: inline-block;
-        margin-right: 11px;
-        
-        i {
-            color: $headerBg;
-            background: $whiteText;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            padding-top: 2px;
-            transition: .5s ease;
-
-            &:hover {
-                transform: scale(1.5);
-            }
-        }
-        .fa-facebook-f{
-            padding-left: 5px;
-        }
-        .fa-instagram{
-            padding-left: 3px;
-        }
-        .fa-youtube {
-            padding-left: 1px;
-        }
-    }
+.section {
+    text-align: center;
+    padding: 60px 0;
 }

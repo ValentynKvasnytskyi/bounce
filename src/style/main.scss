@@ -3,31 +3,29 @@
 @import './partials/header.scss';
 @import './partials/media.scss';
 @import './partials/footer.scss';
+@import './partials/water.scss';
+@import './partials/detox.scss';
 
-//inner-pages-styles
-.inner-header {
-    position: relative;
-    background-color: $greenColor;
-    background-image: url('../img/pageBg.jpg');
-    background-size: cover;
-    padding: 50px 0 50px;
-    .page-title {
-        position: relative;
-        color: $whiteText;
-        text-transform: uppercase;
-        font-size: 2.5em;
-
-    }
+.title {
+    font: 1.8em $roboto;
+    color: $greenColor;
 }
-.inner-bg {
-    z-index: 0;
-    content: '';
-    display: block;
-    background: #000;
-    opacity: .7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.description {
+    color: $greyText;
+    font: .875em $roboto;
+    margin-top: 20px;
+}
+.inner-title {
+    color: #6d6d6d;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.inner-description {
+    color: #a8a8a7;
+    font: .875em $roboto;
+}
+.section__line {
+    max-width: 123px;
+    margin: 10px auto 15px;
 }

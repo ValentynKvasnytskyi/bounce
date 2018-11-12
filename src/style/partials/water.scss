@@ -1,0 +1,58 @@
+.why-water__items {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.why-water__item {
+    width: 30%;
+}
+.why-water__img {
+    width: 64px;
+    height: 64px;
+    margin: 20px auto;
+}
+
+.joint{
+    background-image: url('../img/joint.png');
+}
+.kidney{
+    background-image: url('../img/kidney.png');
+}
+.liver{
+    background-image: url('../img/liver.png');
+}
+.about-water {
+    background: #f5f5f5;
+    &__photo {
+        max-width: 299px;
+        margin-top: 40px;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        .description {
+            align-self: center;
+            text-align: left;
+            width: 60%;
+            line-height: 1.8;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .why-water__items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .why-water__item {
+        width: 100%;
+    }
+    .about-water {
+        &__container {
+            display: block;
+            .description {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
