@@ -1,7 +1,11 @@
 .why-water__items {
     margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .why-water__item {
     width: 30%;
@@ -28,41 +32,30 @@
         margin-top: 40px;
     }
     &__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         .description {
-            align-self: center;
+            -ms-flex-item-align: center;
+                align-self: center;
             text-align: left;
             width: 60%;
             line-height: 1.8;
         }
     }
 }
-.water-video {
-    padding: 60px 0 10px;
-    
-    .line {
-        margin-bottom: 50px;
-    }
-}
-.water-video__wrap {
-    height: 0;
-    position: relative;
-    padding-bottom: 56.25%;
-
-    iframe {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 85%;
-    }
-}
 
 @media screen and (max-width: 992px) {
     .why-water__items {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .why-water__item {
         width: 100%;

@@ -1,0 +1,73 @@
+
+.colo-vada__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.colo-vada__item {
+    margin-top: 60px;
+ 
+    &-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }   
+}
+.colo-vada-testimonials {
+    background: $greenColor;
+    padding-bottom: 0;
+    .title, .description {
+        color: $headerBg;
+    }
+
+    &__items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+
+        div {
+            margin-top: 50px;
+            width: 30%;
+        }
+        img {
+            -webkit-box-shadow: 0 0 20px #000;
+                    box-shadow: 0 0 20px #000;
+        }
+    }
+    .line {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .colo-vada-testimonials {
+        &__items {
+            div {
+                margin-top: 40px;
+                width: 50%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .colo-vada-testimonials {
+        &__items {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            div {
+                margin-top: 40px;
+                width: 100%;
+            }
+        }
+    }
+}
