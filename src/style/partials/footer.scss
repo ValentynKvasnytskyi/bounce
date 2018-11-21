@@ -23,8 +23,8 @@
         transition: .5s ease;
         font-size: 1.3em;
         &:hover {
-            -webkit-transform: scale(1.2);
-                    transform: scale(1.2);
+            -webkit-animation: socialAnimation .5s forwards;
+                    animation: socialAnimation .5s forwards;
         }
     }
 }
