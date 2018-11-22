@@ -28,9 +28,29 @@
         }
     }
 }
-.footer__copy {
-    
+.contact-icon {
+    z-index: 1000;
+    position: fixed;
+    display: inline-block;
+    font-size: 1.8em;
+    line-height: 1.5;
+    border-radius: 50%;
+    background: #444;
+    right: 20px;
+
+    &__phone {
+        padding: 2px 8px 0;
+        bottom: 70px;
+    }
+    &__mail {
+        padding: 3px 8px 0;
+        bottom: 10px;
+    }
+    i {
+        color: $greenColor;
+    }
 }
+
 @media screen and (max-width: 992px) {
     .footer {
         .container {

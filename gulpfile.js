@@ -24,8 +24,8 @@ var path = {
 
     src: {
         html: ['./src/template/**/*.html', '!./src/template/_*.html'],
-        js: './src/js/**/*.js',
-        style: './src/style/main.scss',
+        js: ['./src/js/**/main.js', './src/js/**/magnific-popup.js'],
+        style: ['./src/style/main.scss', './src/style/magnific-popup.css'],
         img: './src/img/**/*.*',
         fonts: './src/fonts/**/*.*'
     },
@@ -56,7 +56,7 @@ gulp.task('html:build', function(){
 
 gulp.task('js:build', function(){
     gulp.src(path.src.js)
-        .pipe(concat('main.js'))
+        //.pipe(concat('main.js'))
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())

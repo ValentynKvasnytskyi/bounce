@@ -23,3 +23,6 @@ $(window).scroll(function() {
 $('.popup-youtube').magnificPopup({ 
   type: 'iframe'
 });
+$('.popup-content').magnificPopup({
+  type: 'inline'
+});
