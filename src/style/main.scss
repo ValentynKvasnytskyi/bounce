@@ -8,6 +8,7 @@
 @import './partials/colo-vada.scss';
 @import './partials/stomach.scss';
 @import './partials/business.scss';
+@import './partials/index.scss';
 
 .title {
     font: 1.8em $roboto;
@@ -28,7 +29,11 @@
     color: #a8a8a7;
     font: .875em $roboto;
 }
+.index-line {
+    background: #000;
+}
 .section__line {
     max-width: 123px;
     margin: 10px auto 15px;
 }
+

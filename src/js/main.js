@@ -19,7 +19,7 @@ $(window).scroll(function() {
     $('.header__main-nav').removeClass('header__fixed-nav');
   }
 });
-
+//popups
 $('.popup-youtube').magnificPopup({ 
   type: 'iframe'
 });
