@@ -17,6 +17,19 @@
         }
     }
 }
+.business__btn {
+    margin-top: 80px;
+    padding: 10px 20px;
+    background: $greenColor;
+    transition: .2s ease;
+    box-shadow: 0 0 5px $greenColor;
+    border: none;
+    &:hover {
+        border: none;
+        color: #fff;
+        box-shadow: 0 0 30px $greenColor;
+    }
+}
 .business-get {
     background: #f1f1f1;
     &__items {
